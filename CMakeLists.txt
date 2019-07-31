@@ -76,7 +76,6 @@ add_executable(fillit_final
         libft/get_next_line.h
         libft/libft.h
         libft/Makefile
-       # fillit.c
         fillit.h
         free_t_tet.c
         is_file_valid.c
