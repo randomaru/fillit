@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././libft/libft.h
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+
+/Users/tamarant/Desktop/fillit_final/fillit.h
+libft/libft.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+stdio.h
+-
+
+/Users/tamarant/Desktop/fillit_final/free_t_tet.c
+fillit.h
+/Users/tamarant/Desktop/fillit_final/fillit.h
+
+/Users/tamarant/Desktop/fillit_final/is_file_valid.c
+fillit.h
+/Users/tamarant/Desktop/fillit_final/fillit.h
+
+/Users/tamarant/Desktop/fillit_final/main.c
+fillit.h
+/Users/tamarant/Desktop/fillit_final/fillit.h
+
+/Users/tamarant/Desktop/fillit_final/remove_tetri.c
+fillit.h
+/Users/tamarant/Desktop/fillit_final/fillit.h
+
