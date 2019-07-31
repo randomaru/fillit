@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 14:20:28 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 18:03:51 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/07/31 18:30:37 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,6 @@ void			print_field(char **field)
 		ft_putendl(field[i]);
 		i++;
 	}
-}
-
-static int		print_mess(int i)
-{
-	if (i == -1)
-		ft_putstr("error\n");
-	return (ERROR);
 }
 
 static int		read_tetriminos(char *argv, char **buffer)
@@ -66,17 +59,17 @@ int				main(int argc, char **argv)
 	if (argc > 2)
 		ft_putstr("usage: fillit target_file\n");
 	else if ((read_chrs = read_tetriminos(argv[1], &buffer)) == -1)
-		print_mess(-1);
+		ft_putstr("error\n");
 	else
 	{
 		if (is_file_valid(buffer, read_chrs, &sum_tet) == 1)
 		{
 			if (!(save_x_y(buffer, sum_tet, &head)))
-				print_mess(-1);
+				ft_putstr("error\n");
 			total(head, sum_tet);
 		}
 		else
-			print_mess(-1);
+			ft_putstr("error\n");
 	}
 	return (0);
 }
