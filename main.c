@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 14:20:28 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 14:21:08 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/07/31 18:03:51 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ void			print_field(char **field)
 	}
 }
 
+static int		print_mess(int i)
+{
+	if (i == -1)
+		ft_putstr("error\n");
+	return (ERROR);
+}
+
 static int		read_tetriminos(char *argv, char **buffer)
 {
 	int		fd;
@@ -45,13 +52,6 @@ static int		read_tetriminos(char *argv, char **buffer)
 		return (ERROR);
 	close(fd);
 	return (read_chrs);
-}
-
-static int		print_mess(int i)
-{
-	if (i == -1)
-		ft_putstr("error\n");
-	return (ERROR);
 }
 
 int				main(int argc, char **argv)

@@ -77,10 +77,9 @@ add_executable(fillit_final
         libft/libft.h
         libft/Makefile
         fillit.h
-        free_t_tet.c
+        free_del.c
         is_file_valid.c
         main.c
-        remove_tetri.c
         save_x_y.c
         make_new.c
         cmake-build-debug/tetriminos_1

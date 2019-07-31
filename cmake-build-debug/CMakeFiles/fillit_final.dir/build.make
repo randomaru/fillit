@@ -902,18 +902,18 @@ CMakeFiles/fillit_final.dir/libft/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit_final.dir/libft/get_next_line.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tamarant/Desktop/fillit_final/libft/get_next_line.c -o CMakeFiles/fillit_final.dir/libft/get_next_line.c.s
 
-CMakeFiles/fillit_final.dir/free_t_tet.c.o: CMakeFiles/fillit_final.dir/flags.make
-CMakeFiles/fillit_final.dir/free_t_tet.c.o: ../free_t_tet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/fillit_final.dir/free_t_tet.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_final.dir/free_t_tet.c.o   -c /Users/tamarant/Desktop/fillit_final/free_t_tet.c
+CMakeFiles/fillit_final.dir/free_del.c.o: CMakeFiles/fillit_final.dir/flags.make
+CMakeFiles/fillit_final.dir/free_del.c.o: ../free_del.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/fillit_final.dir/free_del.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_final.dir/free_del.c.o   -c /Users/tamarant/Desktop/fillit_final/free_del.c
 
-CMakeFiles/fillit_final.dir/free_t_tet.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fillit_final.dir/free_t_tet.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tamarant/Desktop/fillit_final/free_t_tet.c > CMakeFiles/fillit_final.dir/free_t_tet.c.i
+CMakeFiles/fillit_final.dir/free_del.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fillit_final.dir/free_del.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tamarant/Desktop/fillit_final/free_del.c > CMakeFiles/fillit_final.dir/free_del.c.i
 
-CMakeFiles/fillit_final.dir/free_t_tet.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit_final.dir/free_t_tet.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tamarant/Desktop/fillit_final/free_t_tet.c -o CMakeFiles/fillit_final.dir/free_t_tet.c.s
+CMakeFiles/fillit_final.dir/free_del.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit_final.dir/free_del.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tamarant/Desktop/fillit_final/free_del.c -o CMakeFiles/fillit_final.dir/free_del.c.s
 
 CMakeFiles/fillit_final.dir/is_file_valid.c.o: CMakeFiles/fillit_final.dir/flags.make
 CMakeFiles/fillit_final.dir/is_file_valid.c.o: ../is_file_valid.c
@@ -941,22 +941,9 @@ CMakeFiles/fillit_final.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit_final.dir/main.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tamarant/Desktop/fillit_final/main.c -o CMakeFiles/fillit_final.dir/main.c.s
 
-CMakeFiles/fillit_final.dir/remove_tetri.c.o: CMakeFiles/fillit_final.dir/flags.make
-CMakeFiles/fillit_final.dir/remove_tetri.c.o: ../remove_tetri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/fillit_final.dir/remove_tetri.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_final.dir/remove_tetri.c.o   -c /Users/tamarant/Desktop/fillit_final/remove_tetri.c
-
-CMakeFiles/fillit_final.dir/remove_tetri.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fillit_final.dir/remove_tetri.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tamarant/Desktop/fillit_final/remove_tetri.c > CMakeFiles/fillit_final.dir/remove_tetri.c.i
-
-CMakeFiles/fillit_final.dir/remove_tetri.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit_final.dir/remove_tetri.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tamarant/Desktop/fillit_final/remove_tetri.c -o CMakeFiles/fillit_final.dir/remove_tetri.c.s
-
 CMakeFiles/fillit_final.dir/save_x_y.c.o: CMakeFiles/fillit_final.dir/flags.make
 CMakeFiles/fillit_final.dir/save_x_y.c.o: ../save_x_y.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/fillit_final.dir/save_x_y.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/fillit_final.dir/save_x_y.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_final.dir/save_x_y.c.o   -c /Users/tamarant/Desktop/fillit_final/save_x_y.c
 
 CMakeFiles/fillit_final.dir/save_x_y.c.i: cmake_force
@@ -969,7 +956,7 @@ CMakeFiles/fillit_final.dir/save_x_y.c.s: cmake_force
 
 CMakeFiles/fillit_final.dir/make_new.c.o: CMakeFiles/fillit_final.dir/flags.make
 CMakeFiles/fillit_final.dir/make_new.c.o: ../make_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/fillit_final.dir/make_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/fillit_final.dir/make_new.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_final.dir/make_new.c.o   -c /Users/tamarant/Desktop/fillit_final/make_new.c
 
 CMakeFiles/fillit_final.dir/make_new.c.i: cmake_force
@@ -982,7 +969,7 @@ CMakeFiles/fillit_final.dir/make_new.c.s: cmake_force
 
 CMakeFiles/fillit_final.dir/map.c.o: CMakeFiles/fillit_final.dir/flags.make
 CMakeFiles/fillit_final.dir/map.c.o: ../map.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/fillit_final.dir/map.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/fillit_final.dir/map.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_final.dir/map.c.o   -c /Users/tamarant/Desktop/fillit_final/map.c
 
 CMakeFiles/fillit_final.dir/map.c.i: cmake_force
@@ -1060,10 +1047,9 @@ fillit_final_OBJECTS = \
 "CMakeFiles/fillit_final.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/fillit_final.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/fillit_final.dir/libft/get_next_line.c.o" \
-"CMakeFiles/fillit_final.dir/free_t_tet.c.o" \
+"CMakeFiles/fillit_final.dir/free_del.c.o" \
 "CMakeFiles/fillit_final.dir/is_file_valid.c.o" \
 "CMakeFiles/fillit_final.dir/main.c.o" \
-"CMakeFiles/fillit_final.dir/remove_tetri.c.o" \
 "CMakeFiles/fillit_final.dir/save_x_y.c.o" \
 "CMakeFiles/fillit_final.dir/make_new.c.o" \
 "CMakeFiles/fillit_final.dir/map.c.o"
@@ -1136,16 +1122,15 @@ fillit_final: CMakeFiles/fillit_final.dir/libft/ft_swap.c.o
 fillit_final: CMakeFiles/fillit_final.dir/libft/ft_tolower.c.o
 fillit_final: CMakeFiles/fillit_final.dir/libft/ft_toupper.c.o
 fillit_final: CMakeFiles/fillit_final.dir/libft/get_next_line.c.o
-fillit_final: CMakeFiles/fillit_final.dir/free_t_tet.c.o
+fillit_final: CMakeFiles/fillit_final.dir/free_del.c.o
 fillit_final: CMakeFiles/fillit_final.dir/is_file_valid.c.o
 fillit_final: CMakeFiles/fillit_final.dir/main.c.o
-fillit_final: CMakeFiles/fillit_final.dir/remove_tetri.c.o
 fillit_final: CMakeFiles/fillit_final.dir/save_x_y.c.o
 fillit_final: CMakeFiles/fillit_final.dir/make_new.c.o
 fillit_final: CMakeFiles/fillit_final.dir/map.c.o
 fillit_final: CMakeFiles/fillit_final.dir/build.make
 fillit_final: CMakeFiles/fillit_final.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Linking C executable fillit_final"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Linking C executable fillit_final"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fillit_final.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -95,7 +95,7 @@
 		<Unit filename="/Users/tamarant/Desktop/fillit_final/fillit.h">
 			<Option target="fillit_final"/>
 		</Unit>
-		<Unit filename="/Users/tamarant/Desktop/fillit_final/free_t_tet.c">
+		<Unit filename="/Users/tamarant/Desktop/fillit_final/free_del.c">
 			<Option target="fillit_final"/>
 		</Unit>
 		<Unit filename="/Users/tamarant/Desktop/fillit_final/is_file_valid.c">
@@ -315,9 +315,6 @@
 			<Option target="fillit_final"/>
 		</Unit>
 		<Unit filename="/Users/tamarant/Desktop/fillit_final/map.c">
-			<Option target="fillit_final"/>
-		</Unit>
-		<Unit filename="/Users/tamarant/Desktop/fillit_final/remove_tetri.c">
 			<Option target="fillit_final"/>
 		</Unit>
 		<Unit filename="/Users/tamarant/Desktop/fillit_final/save_x_y.c">

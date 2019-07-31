@@ -6,13 +6,13 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 15:57:45 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 17:56:06 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/07/31 18:30:37 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static void		move_tetri(t_tet *tmp, int *i, int a)
+static void		move_tet(t_tet *tmp, int *i, int a)
 {
 	if (a == 1)
 	{
@@ -41,9 +41,9 @@ static int		is_tet_fit(char **field, t_tet *tmp, int size)
 				[tmp->points_y_x[i][1] + tmp->map_x] == '.')
 				i++;
 			else if ((tmp->points_y_x[i][1] + tmp->map_x) < size - 1)
-				move_tetri(tmp, &i, 1);
+				move_tet(tmp, &i, 1);
 			else
-				move_tetri(tmp, &i, 2);
+				move_tet(tmp, &i, 2);
 		}
 		else
 			return (0);
@@ -51,7 +51,7 @@ static int		is_tet_fit(char **field, t_tet *tmp, int size)
 	return (1);
 }
 
-static void		place_tetrimino(t_tet *tmp, char ***t_field)
+static void		place_tet(t_tet *tmp, char ***t_field)
 {
 	int i;
 
@@ -77,7 +77,7 @@ static char		**algoritm(char **t_field, t_tet *tmp, int size)
 		{
 			if (is_tet_fit(t_field, tmp, size))
 			{
-				place_tetrimino(tmp, &t_field);
+				place_tet(tmp, &t_field);
 				map = algoritm(t_field, tmp->next, size);
 				if (map)
 					return (map);

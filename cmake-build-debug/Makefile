@@ -123,32 +123,32 @@ fillit_final/fast:
 	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/build
 .PHONY : fillit_final/fast
 
-free_t_tet.o: free_t_tet.c.o
+free_del.o: free_del.c.o
 
-.PHONY : free_t_tet.o
+.PHONY : free_del.o
 
 # target to build an object file
-free_t_tet.c.o:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_t_tet.c.o
-.PHONY : free_t_tet.c.o
+free_del.c.o:
+	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_del.c.o
+.PHONY : free_del.c.o
 
-free_t_tet.i: free_t_tet.c.i
+free_del.i: free_del.c.i
 
-.PHONY : free_t_tet.i
+.PHONY : free_del.i
 
 # target to preprocess a source file
-free_t_tet.c.i:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_t_tet.c.i
-.PHONY : free_t_tet.c.i
+free_del.c.i:
+	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_del.c.i
+.PHONY : free_del.c.i
 
-free_t_tet.s: free_t_tet.c.s
+free_del.s: free_del.c.s
 
-.PHONY : free_t_tet.s
+.PHONY : free_del.s
 
 # target to generate assembly for a file
-free_t_tet.c.s:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_t_tet.c.s
-.PHONY : free_t_tet.c.s
+free_del.c.s:
+	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_del.c.s
+.PHONY : free_del.c.s
 
 is_file_valid.o: is_file_valid.c.o
 
@@ -2013,33 +2013,6 @@ map.c.s:
 	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/map.c.s
 .PHONY : map.c.s
 
-remove_tetri.o: remove_tetri.c.o
-
-.PHONY : remove_tetri.o
-
-# target to build an object file
-remove_tetri.c.o:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/remove_tetri.c.o
-.PHONY : remove_tetri.c.o
-
-remove_tetri.i: remove_tetri.c.i
-
-.PHONY : remove_tetri.i
-
-# target to preprocess a source file
-remove_tetri.c.i:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/remove_tetri.c.i
-.PHONY : remove_tetri.c.i
-
-remove_tetri.s: remove_tetri.c.s
-
-.PHONY : remove_tetri.s
-
-# target to generate assembly for a file
-remove_tetri.c.s:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/remove_tetri.c.s
-.PHONY : remove_tetri.c.s
-
 save_x_y.o: save_x_y.c.o
 
 .PHONY : save_x_y.o
@@ -2076,9 +2049,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fillit_final"
-	@echo "... free_t_tet.o"
-	@echo "... free_t_tet.i"
-	@echo "... free_t_tet.s"
+	@echo "... free_del.o"
+	@echo "... free_del.i"
+	@echo "... free_del.s"
 	@echo "... is_file_valid.o"
 	@echo "... is_file_valid.i"
 	@echo "... is_file_valid.s"
@@ -2286,9 +2259,6 @@ help:
 	@echo "... map.o"
 	@echo "... map.i"
 	@echo "... map.s"
-	@echo "... remove_tetri.o"
-	@echo "... remove_tetri.i"
-	@echo "... remove_tetri.s"
 	@echo "... save_x_y.o"
 	@echo "... save_x_y.i"
 	@echo "... save_x_y.s"
