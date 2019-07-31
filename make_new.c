@@ -64,6 +64,6 @@ char			**new_field(char **field, int size)
 		field[y][x] = '\0';
 		y++;
 	}
-	field[y] = 0;
+	ft_bzero(&field[y], size + 1);
 	return (field);
 }

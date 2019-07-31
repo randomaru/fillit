@@ -95,7 +95,7 @@
 		<Unit filename="/Users/tamarant/Desktop/fillit_final/fillit.h">
 			<Option target="fillit_final"/>
 		</Unit>
-		<Unit filename="/Users/tamarant/Desktop/fillit_final/free_del.c">
+		<Unit filename="/Users/tamarant/Desktop/fillit_final/free_and_remove.c">
 			<Option target="fillit_final"/>
 		</Unit>
 		<Unit filename="/Users/tamarant/Desktop/fillit_final/is_file_valid.c">

@@ -64,7 +64,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fillit_final.dir/libft/ft_tolower.c.o"
   "CMakeFiles/fillit_final.dir/libft/ft_toupper.c.o"
   "CMakeFiles/fillit_final.dir/libft/get_next_line.c.o"
-  "CMakeFiles/fillit_final.dir/free_del.c.o"
+  "CMakeFiles/fillit_final.dir/free_and_remove.c.o"
   "CMakeFiles/fillit_final.dir/is_file_valid.c.o"
   "CMakeFiles/fillit_final.dir/main.c.o"
   "CMakeFiles/fillit_final.dir/save_x_y.c.o"

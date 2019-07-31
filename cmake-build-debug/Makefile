@@ -123,32 +123,32 @@ fillit_final/fast:
 	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/build
 .PHONY : fillit_final/fast
 
-free_del.o: free_del.c.o
+free_and_remove.o: free_and_remove.c.o
 
-.PHONY : free_del.o
+.PHONY : free_and_remove.o
 
 # target to build an object file
-free_del.c.o:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_del.c.o
-.PHONY : free_del.c.o
+free_and_remove.c.o:
+	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_and_remove.c.o
+.PHONY : free_and_remove.c.o
 
-free_del.i: free_del.c.i
+free_and_remove.i: free_and_remove.c.i
 
-.PHONY : free_del.i
+.PHONY : free_and_remove.i
 
 # target to preprocess a source file
-free_del.c.i:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_del.c.i
-.PHONY : free_del.c.i
+free_and_remove.c.i:
+	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_and_remove.c.i
+.PHONY : free_and_remove.c.i
 
-free_del.s: free_del.c.s
+free_and_remove.s: free_and_remove.c.s
 
-.PHONY : free_del.s
+.PHONY : free_and_remove.s
 
 # target to generate assembly for a file
-free_del.c.s:
-	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_del.c.s
-.PHONY : free_del.c.s
+free_and_remove.c.s:
+	$(MAKE) -f CMakeFiles/fillit_final.dir/build.make CMakeFiles/fillit_final.dir/free_and_remove.c.s
+.PHONY : free_and_remove.c.s
 
 is_file_valid.o: is_file_valid.c.o
 
@@ -2049,9 +2049,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fillit_final"
-	@echo "... free_del.o"
-	@echo "... free_del.i"
-	@echo "... free_del.s"
+	@echo "... free_and_remove.o"
+	@echo "... free_and_remove.i"
+	@echo "... free_and_remove.s"
 	@echo "... is_file_valid.o"
 	@echo "... is_file_valid.i"
 	@echo "... is_file_valid.s"

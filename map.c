@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 15:57:45 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 18:30:37 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/07/31 19:13:08 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ static char		**algoritm(char **t_field, t_tet *tmp, int size)
 	return (NULL);
 }
 
-void			total(t_tet *head, int sum_tet)
+int		total(t_tet *head, int sum_tet)
 {
 	char	**t_field;
 	int		min_size;
@@ -103,8 +103,9 @@ void			total(t_tet *head, int sum_tet)
 	min_size = sum_tet * 4;
 	while (min_size > size * size)
 		size++;
-	t_field = new_field(t_field, size);
-	while (!(algoritm(t_field, head, size)))
+	if (!(t_field = new_field(t_field, size)))
+		return (0);
+	while (!(t_field = algoritm(t_field, head, size)))
 	{
 		size++;
 		ft_memdel((void **)&t_field);
@@ -112,4 +113,5 @@ void			total(t_tet *head, int sum_tet)
 	}
 	print_field(t_field);
 	free_t_tet(&head);
+	return (1);
 }

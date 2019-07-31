@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/tamarant/Desktop/fillit_final/free_del.c" "/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles/fillit_final.dir/free_del.c.o"
+  "/Users/tamarant/Desktop/fillit_final/free_and_remove.c" "/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles/fillit_final.dir/free_and_remove.c.o"
   "/Users/tamarant/Desktop/fillit_final/is_file_valid.c" "/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles/fillit_final.dir/is_file_valid.c.o"
   "/Users/tamarant/Desktop/fillit_final/libft/ft_atoi.c" "/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles/fillit_final.dir/libft/ft_atoi.c.o"
   "/Users/tamarant/Desktop/fillit_final/libft/ft_bzero.c" "/Users/tamarant/Desktop/fillit_final/cmake-build-debug/CMakeFiles/fillit_final.dir/libft/ft_bzero.c.o"
