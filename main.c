@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 14:20:28 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 18:30:37 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/07/31 18:32:35 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int		read_tetriminos(char *argv, char **buffer)
 		return (ERROR);
 	if (!(read_chrs = read(fd, *buffer, BUFF_SIZE)))
 		return (ERROR);
-	if (read_chrs == BUFF_SIZE)
+	if (read_chrs == BUFF_SIZE || read_chrs < 20)
 		return (ERROR);
 	close(fd);
 	return (read_chrs);

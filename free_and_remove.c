@@ -39,6 +39,8 @@ void			free_t_tet(t_tet **tmp)
 		free_arr_points(&(*tmp)->points_y_x);
 		(*tmp)->y_min = 0;
 		(*tmp)->x_min = 0;
+		(*tmp)->map_y = 0;
+		(*tmp)->map_x = 0;
 		(*tmp)->prev = NULL;
 		(*tmp)->next = NULL;
 		free(*tmp);
