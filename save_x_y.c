@@ -67,7 +67,7 @@ t_tet			*save_x_y(char *buf, int sum_tetriminos, t_tet **head)
 		prev_tet_tmp = tmp;
 		if (!(tmp->next = new_tet_points(letter++)))
 			free_t_tet(&tmp);
-		next(&tmp, &prev_tet_tmp, &j, &sum_t_tet);
+		next(&tmp, &prev_tet_tmp, &j, &sum_t_tet); ///?????? возможно тут не нужны адреса
 	}
 	return (*head);
 }

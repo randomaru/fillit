@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 14:20:28 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 18:32:35 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/08/01 14:43:09 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void			print_field(char **field)
 		return ;
 	}
 	i = 0;
-	while (field[i] != 0)
+	while (field[i] != '\0')
 	{
 		ft_putendl(field[i]);
 		i++;
@@ -35,7 +35,7 @@ static int		read_tetriminos(char *argv, char **buffer)
 	int		fd;
 	int		read_chrs;
 
-	if (!(*(buffer) = ft_memalloc(BUFF_SIZE + 1)))
+	if (!(*(buffer) = ft_memalloc(BUFF_SIZE)))
 		return (ERROR);
 	if (!(fd = open(argv, O_RDONLY)))
 		return (ERROR);
@@ -59,17 +59,34 @@ int				main(int argc, char **argv)
 	if (argc > 2)
 		ft_putstr("usage: fillit target_file\n");
 	else if ((read_chrs = read_tetriminos(argv[1], &buffer)) == -1)
+	{
 		ft_putstr("error\n");
+		return (0);
+	}
 	else
 	{
 		if (is_file_valid(buffer, read_chrs, &sum_tet) == 1)
 		{
 			if (!(save_x_y(buffer, sum_tet, &head)))
+			{
 				ft_putstr("error\n");
-			total(head, sum_tet);
+				return (0);
+			}
+			if (!(total(head, sum_tet)))
+			{
+				ft_putstr("error\n");
+				free_t_tet_head(&head);
+				return (0);
+			}
 		}
 		else
+		{
 			ft_putstr("error\n");
+			return (0);
+		}
 	}
-	return (0);
+	free_t_tet_head(&head);
+	///FREEEEEEEEEEEEEEEEEEEE
+
+	return (1);
 }

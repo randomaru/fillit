@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 17:48:40 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 17:57:55 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/08/01 14:06:36 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,11 @@ char			**new_field(char **field, int size)
 	int		y;
 
 	y = 0;
-	field = (char **)malloc(sizeof(char *) * size + 1);
-	if (!field)
+	if (!(field = (char **)malloc(sizeof(char *) * size + 1)))
 		return (NULL);
 	while (y < size)
 	{
-		if (!(field[y] = (char *)malloc(sizeof(char) * size + 1)))
+		if (!(field[y] = ft_memalloc(size + 1))) //(char *)malloc(sizeof(char) * size + 1)))
 			return (NULL);
 		x = 0;
 		while (x < size)

@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:08:18 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 18:26:15 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/08/01 15:08:54 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 static void		free_arr_points(int ***arr)
 {
 	int i;
-	int j;
 
 	i = 0;
-	j = 0;
 	while (i < 4)
 	{
 		free(*(*arr + i));
@@ -46,6 +44,40 @@ void			free_t_tet(t_tet **tmp)
 		free(*tmp);
 		*tmp = prev_lst;
 	}
+}
+
+void			free_t_tet_head(t_tet **head)
+{
+	t_tet *next_lst;
+
+	while (*head)
+	{
+		next_lst = (*head)->next;
+		free_arr_points(&(*head)->points_y_x);
+		(*head)->y_min = 0;
+		(*head)->x_min = 0;
+		(*head)->map_y = 0;
+		(*head)->map_x = 0;
+		(*head)->prev = NULL;
+		(*head)->next = NULL;
+		free(*head);
+		*head = next_lst;
+	}
+}
+
+void			free_t_field(char ***field, int size)
+{
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+		free(*(*field + i));
+		*(*field + i) = NULL;
+		i++;
+	}
+	free(*field);
+	*field = NULL;
 }
 
 char	**remove_tetri(char **t_field, t_tet *tmp)

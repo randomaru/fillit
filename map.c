@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 15:57:45 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 19:18:29 by fboggs           ###   ########.fr       */
+/*   Updated: 2019/08/01 15:12:15 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ static char		**algoritm(char **t_field, t_tet *tmp, int size)
 	}
 	tmp->map_y = 0;
 	tmp->map_x = 0;
-	return (NULL);
+	return (NULL); ///возможно половина утечек из-за этого, пытается обратиться к памяти за пределами
 
 }
 
@@ -109,10 +109,12 @@ int		total(t_tet *head, int sum_tet)
 	while (!(t_field = algoritm(t_field, head, size)))
 	{
 		size++;
-		ft_memdel((void **)&t_field);
-		t_field = new_field(t_field, size);
+		//ft_memdel((void **)&t_field);
+		if (t_field)
+			free_t_field(&t_field, size);
+		if (!(t_field = new_field(t_field, size)))
+			return (0);
 	}
 	print_field(t_field);
-	free_t_tet(&head);
 	return (1);
 }
