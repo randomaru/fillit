@@ -6,13 +6,13 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 14:20:28 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/01 14:43:09 by mac              ###   ########.fr       */
+/*   Updated: 2019/08/01 18:58:14 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void			print_field(char **field)
+void print_field(char **field, int size)
 {
 	int		i;
 
@@ -23,7 +23,7 @@ void			print_field(char **field)
 		return ;
 	}
 	i = 0;
-	while (field[i] != '\0')
+	while (i < size)
 	{
 		ft_putendl(field[i]);
 		i++;
@@ -70,12 +70,16 @@ int				main(int argc, char **argv)
 			if (!(save_x_y(buffer, sum_tet, &head)))
 			{
 				ft_putstr("error\n");
+				free(buffer);
+				buffer = NULL;
 				return (0);
 			}
-			if (!(total(head, sum_tet)))
+			if (!(map(head, sum_tet)))
 			{
 				ft_putstr("error\n");
 				free_t_tet_head(&head);
+				free(buffer);
+				buffer = NULL;
 				return (0);
 			}
 		}
@@ -87,6 +91,8 @@ int				main(int argc, char **argv)
 	}
 	free_t_tet_head(&head);
 	///FREEEEEEEEEEEEEEEEEEEE
+	free(buffer);
+	buffer = NULL;
 
 	return (1);
 }

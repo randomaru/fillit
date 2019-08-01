@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 17:06:32 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/01 14:56:11 by mac              ###   ########.fr       */
+/*   Updated: 2019/08/01 18:58:14 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ t_tet					*save_x_y(char *buf, int sum_tetriminos, t_tet **head);
 void					free_t_tet(t_tet **tmp);
 void					free_t_tet_head(t_tet **head);
 void			free_t_field(char ***field, int size);
-int 					total(t_tet *head, int sum_tet);
+int 					map(t_tet *head, int sum_tet);
 char            		**remove_tetri(char **t_field, t_tet *tmp);
-void					print_field(char **field);
+void print_field(char **field, int size);
 t_tet					*new_tet_points(char letter);
 char					**new_field(char **field, int size);
 

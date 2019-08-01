@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   total.c                                            :+:      :+:    :+:   */
+/*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 15:57:45 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/01 15:12:15 by mac              ###   ########.fr       */
+/*   Created: 2019/08/01 20:32:00 by tamarant          #+#    #+#             */
+/*   Updated: 2019/08/01 20:32:02 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,20 @@ static int		is_tet_fit(char **field, t_tet *tmp, int size)
 	i = 0;
 	while (i < 4)
 	{
-		if ((tmp->points_y_x[i][0] + tmp->map_y) < size &&
-			(tmp->points_y_x[i][1] + tmp->map_x) < size)
+		if ((tmp->points_y_x[i][0] + tmp->map_y) < 0 || (tmp->points_y_x[i][1] + tmp->map_x) < 0)
 		{
-			if (field[tmp->points_y_x[i][0] + tmp->map_y]
-				[tmp->points_y_x[i][1] + tmp->map_x] == '.')
+			tmp->map_x += 1;
+			i = 0;
+		}
+		else if ((tmp->points_y_x[i][0] + tmp->map_y) < size && (tmp->points_y_x[i][1] + tmp->map_x) < size)
+		{
+			if (field[tmp->points_y_x[i][0] + tmp->map_y][tmp->points_y_x[i][1] + tmp->map_x] == '.')
 				i++;
 			else if ((tmp->points_y_x[i][1] + tmp->map_x) < size - 1)
 				move_tet(tmp, &i, 1);
 			else
 				move_tet(tmp, &i, 2);
-		}
+		} //////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		else
 			return (0);
 	}
@@ -93,7 +96,7 @@ static char		**algoritm(char **t_field, t_tet *tmp, int size)
 
 }
 
-int		total(t_tet *head, int sum_tet)
+int		map(t_tet *head, int sum_tet)
 {
 	char	**t_field;
 	int		min_size;
@@ -109,12 +112,11 @@ int		total(t_tet *head, int sum_tet)
 	while (!(t_field = algoritm(t_field, head, size)))
 	{
 		size++;
-		//ft_memdel((void **)&t_field);
 		if (t_field)
 			free_t_field(&t_field, size);
 		if (!(t_field = new_field(t_field, size)))
 			return (0);
 	}
-	print_field(t_field);
+	print_field(t_field, size);
 	return (1);
 }
