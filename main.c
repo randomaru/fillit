@@ -6,13 +6,13 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 14:20:28 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/01 18:58:14 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/08/02 16:56:45 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void print_field(char **field, int size)
+void			print_field(char **field, int size)
 {
 	int		i;
 
@@ -49,7 +49,7 @@ static int		read_tetriminos(char *argv, char **buffer)
 
 int				main(int argc, char **argv)
 {
-	char	*buffer;
+	char	*buffer = NULL;
 	int		read_chrs;
 	int		sum_tet;
 	t_tet	*head;
@@ -90,9 +90,7 @@ int				main(int argc, char **argv)
 		}
 	}
 	free_t_tet_head(&head);
-	///FREEEEEEEEEEEEEEEEEEEE
 	free(buffer);
 	buffer = NULL;
-
 	return (1);
 }

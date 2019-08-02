@@ -12,7 +12,7 @@
 
 #include "fillit.h"
 
-static void		valid_sum(char *buffer, int *valid_num) ///26 строк
+static void		valid_sum(char *buffer, int *valid_num)
 {
 	int x;
 	int y;

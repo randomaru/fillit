@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 20:32:00 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/01 20:32:02 by tamarant         ###   ########.fr       */
+/*   Updated: 2019/08/02 20:02:20 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,23 @@ static int		is_tet_fit(char **field, t_tet *tmp, int size)
 	i = 0;
 	while (i < 4)
 	{
-		if ((tmp->points_y_x[i][0] + tmp->map_y) < 0 || (tmp->points_y_x[i][1] + tmp->map_x) < 0)
+		if ((tmp->points_y_x[i][0] + tmp->map_y) < 0 ||
+		(tmp->points_y_x[i][1] + tmp->map_x) < 0)
 		{
 			tmp->map_x += 1;
 			i = 0;
 		}
-		else if ((tmp->points_y_x[i][0] + tmp->map_y) < size && (tmp->points_y_x[i][1] + tmp->map_x) < size)
+		else if ((tmp->points_y_x[i][0] + tmp->map_y) < size &&
+		(tmp->points_y_x[i][1] + tmp->map_x) < size)
 		{
-			if (field[tmp->points_y_x[i][0] + tmp->map_y][tmp->points_y_x[i][1] + tmp->map_x] == '.')
+			if (field[tmp->points_y_x[i][0] + tmp->map_y]
+			[tmp->points_y_x[i][1] + tmp->map_x] == '.')
 				i++;
 			else if ((tmp->points_y_x[i][1] + tmp->map_x) < size - 1)
 				move_tet(tmp, &i, 1);
 			else
 				move_tet(tmp, &i, 2);
-		} //////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		}
 		else
 			return (0);
 	}
@@ -92,11 +95,12 @@ static char		**algoritm(char **t_field, t_tet *tmp, int size)
 	}
 	tmp->map_y = 0;
 	tmp->map_x = 0;
-	return (NULL); ///возможно половина утечек из-за этого, пытается обратиться к памяти за пределами
-
+	if (!tmp->prev)
+		free_t_field(&t_field, size);
+	return (NULL);
 }
 
-int		map(t_tet *head, int sum_tet)
+int				map(t_tet *head, int sum_tet)
 {
 	char	**t_field;
 	int		min_size;
@@ -115,8 +119,12 @@ int		map(t_tet *head, int sum_tet)
 		if (t_field)
 			free_t_field(&t_field, size);
 		if (!(t_field = new_field(t_field, size)))
+		{
+			free_t_field(&t_field, size);
 			return (0);
+		}
 	}
 	print_field(t_field, size);
+	free_t_field(&t_field, size);
 	return (1);
 }

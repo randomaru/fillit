@@ -6,7 +6,7 @@
 /*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:08:18 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/01 15:08:54 by mac              ###   ########.fr       */
+/*   Updated: 2019/08/02 16:57:13 by tamarant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,15 +80,14 @@ void			free_t_field(char ***field, int size)
 	*field = NULL;
 }
 
-char	**remove_tetri(char **t_field, t_tet *tmp)
+char			**remove_tetri(char **t_field, t_tet *tmp)
 {
 	int i;
 
 	i = 0;
 	while (i < 4)
 	{
-		if ((t_field[(tmp)->points_y_x[i][0] + tmp->map_y]
-		[(tmp)->points_y_x[i][1] + tmp->map_x]) != '.')
+		if ((t_field[(tmp)->points_y_x[i][0] + tmp->map_y][(tmp)->points_y_x[i][1] + tmp->map_x]) != '.')
 			t_field[(tmp)->points_y_x[i][0] + tmp->map_y]
 			[(tmp)->points_y_x[i][1] + tmp->map_x] = '.';
 		i++;
