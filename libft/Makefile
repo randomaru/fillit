@@ -6,7 +6,7 @@
 #    By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/09 18:10:20 by tamarant          #+#    #+#              #
-#    Updated: 2019/07/19 00:56:33 by mac              ###   ########.fr        #
+#    Updated: 2019/08/05 13:35:07 by fboggs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,15 +42,13 @@ OBJ = ft_putchar.o ft_putstr.o ft_strcmp.o ft_strcpy.o ft_strdup.o \
 	  ft_iterative_factorial.o ft_free.o ft_iterative_power.o \
 	  ft_strjoin_free.o get_next_line.o ft_strnchr.o
 
-
-FLAGS = -Wall -Wextra -Werror
-
 all: $(NAME)
 
-$(NAME):
-				gcc $(FLAGS) -I libft.h -c $(SRC)
-				ar rc $(NAME) $(OBJ)
-				ranlib $(NAME)
+$(NAME): $(OBJ)
+		ar rc $(NAME) $(OBJ)
+
+%o:%c
+		gcc $(CFLAGS) -I. -c $<
 
 clean:
 				rm -rf $(OBJ)

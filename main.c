@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboggs <fboggs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 14:20:28 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/02 16:56:45 by tamarant         ###   ########.fr       */
+/*   Created: 2019/08/05 14:08:03 by fboggs            #+#    #+#             */
+/*   Updated: 2019/08/05 15:46:09 by fboggs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void			print_field(char **field, int size)
 {
 	int		i;
 
-	i = 0;
 	if (field == NULL)
 	{
 		ft_putendl("ERROR");
@@ -47,50 +46,39 @@ static int		read_tetriminos(char *argv, char **buffer)
 	return (read_chrs);
 }
 
+static int		final_free(t_tet **head, char **buffer)//добавила
+{
+	free_t_tet_head(head);
+	free(*buffer);
+	*buffer = NULL;
+	return (0); // может программа завершаться из этой функции, а не из мэйна?
+}
+
 int				main(int argc, char **argv)
 {
-	char	*buffer = NULL;
+	char	*buffer;
 	int		read_chrs;
 	int		sum_tet;
 	t_tet	*head;
 
 	head = NULL;
+	buffer = NULL;
 	sum_tet = 0;
-	if (argc > 2)
+	if (argc == 1 || argc > 2)// В сабджекте условие когда параметров не 1, значит или больше или меньше(т.е. argc == 1)
 		ft_putstr("usage: fillit target_file\n");
 	else if ((read_chrs = read_tetriminos(argv[1], &buffer)) == -1)
-	{
 		ft_putstr("error\n");
-		return (0);
-	}
 	else
 	{
 		if (is_file_valid(buffer, read_chrs, &sum_tet) == 1)
 		{
 			if (!(save_x_y(buffer, sum_tet, &head)))
-			{
 				ft_putstr("error\n");
-				free(buffer);
-				buffer = NULL;
-				return (0);
-			}
 			if (!(map(head, sum_tet)))
-			{
 				ft_putstr("error\n");
-				free_t_tet_head(&head);
-				free(buffer);
-				buffer = NULL;
-				return (0);
-			}
 		}
 		else
-		{
 			ft_putstr("error\n");
-			return (0);
-		}
 	}
-	free_t_tet_head(&head);
-	free(buffer);
-	buffer = NULL;
-	return (1);
+	final_free(&head, &buffer); // добавила
 }

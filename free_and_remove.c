@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_t_tet.c                                       :+:      :+:    :+:   */
+/*   free_and_remove.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboggs <fboggs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:08:18 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/02 16:57:13 by tamarant         ###   ########.fr       */
+/*   Created: 2019/08/05 15:44:39 by fboggs            #+#    #+#             */
+/*   Updated: 2019/08/05 15:44:39 by fboggs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,8 @@ char			**remove_tetri(char **t_field, t_tet *tmp)
 	i = 0;
 	while (i < 4)
 	{
-		if ((t_field[(tmp)->points_y_x[i][0] + tmp->map_y][(tmp)->points_y_x[i][1] + tmp->map_x]) != '.')
+		if ((t_field[(tmp)->points_y_x[i][0] + tmp->map_y]
+			[(tmp)->points_y_x[i][1] + tmp->map_x]) != '.')
 			t_field[(tmp)->points_y_x[i][0] + tmp->map_y]
 			[(tmp)->points_y_x[i][1] + tmp->map_x] = '.';
 		i++;

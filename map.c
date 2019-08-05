@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboggs <fboggs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/01 20:32:00 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/02 20:02:20 by tamarant         ###   ########.fr       */
+/*   Created: 2019/08/05 15:44:25 by fboggs            #+#    #+#             */
+/*   Updated: 2019/08/05 15:44:41 by fboggs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ static void		move_tet(t_tet *tmp, int *i, int a)
 		*i = 0;
 		tmp->map_y += 1;
 	}
+	else if (a == 3) // добавила
+	{
+		tmp->map_y = 0;
+		tmp->map_x = 0;
+	}
 }
 
 static int		is_tet_fit(char **field, t_tet *tmp, int size)
@@ -35,11 +40,8 @@ static int		is_tet_fit(char **field, t_tet *tmp, int size)
 	while (i < 4)
 	{
 		if ((tmp->points_y_x[i][0] + tmp->map_y) < 0 ||
-		(tmp->points_y_x[i][1] + tmp->map_x) < 0)
-		{
-			tmp->map_x += 1;
-			i = 0;
-		}
+			(tmp->points_y_x[i][1] + tmp->map_x) < 0)
+			move_tet(tmp, &i, 1); // добавила
 		else if ((tmp->points_y_x[i][0] + tmp->map_y) < size &&
 		(tmp->points_y_x[i][1] + tmp->map_x) < size)
 		{
@@ -84,17 +86,16 @@ static char		**algoritm(char **t_field, t_tet *tmp, int size)
 			if (is_tet_fit(t_field, tmp, size))
 			{
 				place_tet(tmp, &t_field);
-				map = algoritm(t_field, tmp->next, size);
+				if (!(map = algoritm(t_field, tmp->next, size)))
+					t_field = remove_tetri(t_field, tmp);
 				if (map)
 					return (map);
-				t_field = remove_tetri(t_field, tmp);
 			}
 			tmp->map_x += 1;
 		}
 		tmp->map_y += 1;
 	}
-	tmp->map_y = 0;
-	tmp->map_x = 0;
+	move_tet(tmp, 0, 3); //добавила
 	if (!tmp->prev)
 		free_t_field(&t_field, size);
 	return (NULL);

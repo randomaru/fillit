@@ -3,14 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   is_file_valid.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboggs <fboggs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/18 17:47:26 by tamarant          #+#    #+#             */
-/*   Updated: 2019/07/31 18:11:18 by tamarant         ###   ########.fr       */
+/*   Created: 2019/08/05 14:09:23 by fboggs            #+#    #+#             */
+/*   Updated: 2019/08/05 15:42:55 by fboggs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
+
+static void		next_line_or_cell(int *i, int *x, int *y, int a) // добавила
+{
+	if (a == 2)
+	{
+		*i += 1;
+		*x = 0;
+		*y += 1;
+	}
+	else if (a == 1)
+	{
+		*i += 1;
+		*x += 1;
+	}
+}
 
 static void		valid_sum(char *buffer, int *valid_num)
 {
@@ -33,12 +48,9 @@ static void		valid_sum(char *buffer, int *valid_num)
 				if (y < 3 && *(buffer + i + 5) == '#')
 					*valid_num += 1;
 			}
-			i++;
-			x++;
+			next_line_or_cell(&i, &x, 0, 1);
 		}
-		i++;
-		x = 0;
-		y++;
+		next_line_or_cell(&i, &x, &y, 2);
 	}
 }
 

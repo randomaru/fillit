@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   make_new.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamarant <tamarant@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fboggs <fboggs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 17:48:40 by tamarant          #+#    #+#             */
-/*   Updated: 2019/08/02 17:03:37 by tamarant         ###   ########.fr       */
+/*   Created: 2019/08/05 15:44:32 by fboggs            #+#    #+#             */
+/*   Updated: 2019/08/05 15:44:32 by fboggs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,18 @@ t_tet			*new_tet_points(char letter)
 	return (new);
 }
 
+static void		free_if_not(int y, char ***field)
+{
+	while (y >= 0)// так ведь ок?
+	{
+		free(field[y]);
+		y--;
+		field[y] = NULL;
+	}
+	free(field);
+	field = NULL;
+}
+
 char			**new_field(char **field, int size)
 {
 	int		x;
@@ -57,14 +69,7 @@ char			**new_field(char **field, int size)
 	{
 		if (!(field[y] = ft_memalloc(size + 1)))
 		{
-			while (y != -1)
-			{
-				free(field[y]);
-				field[y] = NULL;
-				y--;
-			}
-			free(field);
-			field = NULL;
+			free_if_not(y, &field);
 			return (NULL);
 		}
 		x = 0;
