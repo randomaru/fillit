@@ -8,5 +8,5 @@ The description of a Tetriminos must respect the following rules :
 - Each block of a Tetrimino must touch at least one other block on any of his 4 sides (up, down, left and right).
 
 *Examples of valid tetriminos:*
-![Image alt](https://github.com/randomaru/fillit/raw/master/img/valid.png)
+![Valid](https://github.com/randomaru/fillit/raw/master/img/valid.png)
 
