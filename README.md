@@ -10,6 +10,8 @@ The description of a Tetriminos must respect the following rules :
 *Examples of valid tetriminos:*<br>
 ![Valid](https://github.com/randomaru/fillit/raw/master/img/valid.png)<br>
 
+To identify each Tetrimino in the square solution, we will assign a capital letter to each Tetrimino, starting with ’A’ and increasing for each new Tetrimino. Maximum number of tetriminos in map is 26.
+
 # Test!
 Run `make` then run `./fillit` with map from tests directory, for example:<br>
 
