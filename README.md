@@ -12,4 +12,15 @@ The description of a Tetriminos must respect the following rules :
 
 # Test!
 Run `make` then run `./fillit` with map from tests directory, for example:<br>
-![prog](https://github.com/randomaru/fillit/raw/master/img/prog.png)
+
+![prog](https://github.com/randomaru/fillit/raw/master/img/prog.png)<br>
+
+**This is a group project.**  
+
+## Authors: 
+
+
+<ul>
+        <li><a href="https://github.com/randomaru">Maria Belyaeva</a></li>
+        <li> <a href="https://github.com/Svetlaaanl">Svetlana Fomina</a></li>
+</ul>
