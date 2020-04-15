@@ -7,10 +7,4 @@ The description of a Tetriminos must respect the following rules :
 - Each character must be either a block character(’#’ ) or an empty character (’.’).
 - Each block of a Tetrimino must touch at least one other block on any of his 4 sides (up, down, left and right).
 *Examples of valid tetriminos:*
-```
-....   ....   ####   ....   .##.   ....   .#..   ....   ....
-..##   ....   ....   ....   ..##   .##.   ###.   ##..   .##.
-..#.   ..##   ....   ##..   ....   ##..   ....   #...   ..#.
-..#.   ..##   ....   ##..   ....   ....   ....   #...   ..#.
 
-```
